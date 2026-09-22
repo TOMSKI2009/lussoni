@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.homeTitle">Lussoni — ლუქს ავეჯი | რელიქვია თანამედროვე სახლისთვის</title>
+  <meta name="description" data-i18n="meta.homeDesc" content="Lussoni ქმნის გამორჩეულ ავეჯს გამორჩეული სივრცეებისთვის. დაათვალიერეთ ხელით შექმნილი დივნების, სასადილო მაგიდების და აქცენტების კოლექციები — თითოეული ხელოვნების ნიმუშია." />
+  <meta name="theme-color" content="#18181a" />
+
+  <!-- Favicon placeholder (uses logo) -->
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- ── Cursor ───────────────────────────────────────── -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ── Loader ───────────────────────────────────────── -->
+  <div id="loader" role="status" aria-label="Loading Lussoni">
+    <img src="assets/logo.png" alt="" class="loader__emblem" />
+    <div class="loader__bar"></div>
+    <span class="loader__text">Lussoni</span>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAVIGATION
+       ══════════════════════════════════════════════════════ -->
+  <nav class="nav" aria-label="Primary navigation">
+    <a href="index.html" class="nav__logo" aria-label="Lussoni home">
+      <img src="assets/logo.png" alt="Lussoni lion emblem" class="nav__logo-img" />
+      <span class="nav__logo-text">Lussoni</span>
+    </a>
+
+    <ul class="nav__links" role="list">
+      <li><a href="index.html" class="nav__link active" data-i18n="nav.home">მთავარი</a></li>
+      <li><a href="collection.html" class="nav__link" data-i18n="nav.collections">კოლექციები</a></li>
+      <li><a href="collection.html" class="nav__link" data-i18n="nav.living">მისაღები</a></li>
+      <li><a href="collection.html" class="nav__link" data-i18n="nav.dining">სასადილო</a></li>
+      <li><a href="collection.html" class="nav__link" data-i18n="nav.bedroom">საძინებელი</a></li>
+      <li><a href="#about" class="nav__link" data-i18n="nav.atelier">ატელიე</a></li>
+    </ul>
+
+    <div class="nav__actions">
+      <!-- Language Switcher -->
+      <div class="lang-switcher" role="group" aria-label="Language selection">
+        <button type="button" class="lang-switcher__btn active" data-lang="ka" aria-label="ქართული">ქარ</button>
+        <span class="lang-switcher__divider" aria-hidden="true">/</span>
+        <button type="button" class="lang-switcher__btn" data-lang="en" aria-label="English">EN</button>
+      </div>
+
+      <button class="nav__icon-btn" id="nav-search-btn" aria-label="Search" data-i18n-aria="nav.searchAria">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="nav__icon-btn" aria-label="Wishlist" data-i18n-aria="nav.wishlistAria">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+      <button class="nav__icon-btn" aria-label="Cart" data-i18n-aria="nav.cartAria" id="nav-cart-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="nav__cart-count" aria-hidden="true">0</span>
+      </button>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Open menu" data-i18n-aria="nav.menuAria" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="nav__mobile" id="mobile-nav" aria-hidden="true">
+    <a href="index.html" class="nav__mobile-link" data-i18n="nav.home">მთავარი</a>
+    <a href="collection.html" class="nav__mobile-link" data-i18n="nav.collections">კოლექციები</a>
+    <a href="collection.html" class="nav__mobile-link" data-i18n="nav.living">მისაღები</a>
+    <a href="collection.html" class="nav__mobile-link" data-i18n="nav.dining">სასადილო</a>
+    <a href="collection.html" class="nav__mobile-link" data-i18n="nav.bedroom">საძინებელი</a>
+    <a href="#about" class="nav__mobile-link" data-i18n="nav.atelier">ატელიე</a>
+    <div class="nav__mobile-lang" role="group" aria-label="Language selection">
+      <button type="button" class="lang-switcher__btn active" data-lang="ka">ქართული</button>
+      <span class="lang-switcher__divider" aria-hidden="true">/</span>
+      <button type="button" class="lang-switcher__btn" data-lang="en">English</button>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════════
+         HERO
+         ══════════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Hero">
+      <!-- Full-bleed background image with parallax -->
+      <div class="hero__bg" data-parallax="0.25">
+        <img src="assets/images/hero_interior_1790075731230.jpg" 
+             alt="Lussoni luxury interior" 
+             class="hero__bg-img" />
+        <div class="hero__bg-overlay"></div>
+      </div>
+
+      <!-- Giant watermark emblem -->
+      <div class="hero__watermark" aria-hidden="true">
+        <img src="assets/logo.png" alt="" />
+      </div>
+
+      <!-- Content -->
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow hero__eyebrow anim-fade-in anim-delay-2" data-i18n="hero.eyebrow">დაარსდა 1987 წელს — მილანი</p>
+          <h1 class="hero__headline anim-fade-in-up anim-delay-2" data-i18n="hero.headline">
+            სადაც ყოველი ოთახი<br />
+            <em>ისტორიას ჰყვება</em>
+          </h1>
+          <p class="hero__sub anim-fade-in-up anim-delay-3" data-i18n="hero.sub">
+            ავეჯი, რომელიც დროს უძლებს. შექმნილი მათთვის, ვინც მხოლოდ საუკეთესოს ითხოვს.
+          </p>
+          <div class="hero__actions anim-fade-in-up anim-delay-4">
+            <a href="collection.html" class="btn btn--primary btn--lg">
+              <span data-i18n="hero.ctaExplore">კოლექციის დათვალიერება</span>
+            </a>
+            <a href="#featured" class="btn btn--ghost btn--lg" data-i18n="hero.ctaStory">ჩვენი ისტორია</a>
+          </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="hero__scroll anim-fade-in anim-delay-5" aria-hidden="true">
+          <div class="hero__scroll-line"></div>
+          <span data-i18n="common.scroll">ჩამოშლა</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         BRAND MANIFESTO
+         ══════════════════════════════════════════════════ -->
+    <section class="section section--sm manifesto" id="about">
+      <div class="container container--narrow">
+        <div class="divider reveal">
+          <img src="assets/logo.png" alt="" class="divider__emblem" />
+        </div>
+        <p class="manifesto__text lead reveal reveal--delay-1" data-i18n="manifesto.text">
+          Lussoni-ში გვწამს, რომ სახლი მისი მცხოვრებლების პორტრეტია.
+          ყოველი ნივთი, რომელსაც ვქმნით, არის ერთგულების გამოხატულება — მასალის, ფორმის და იმ ოსტატების მიმართ, რომელთა ხელებიც ქმნიან თაობებისთვის განკუთვნილ ღირებულებებს.
+        </p>
+        <div class="divider reveal reveal--delay-2">
+          <img src="assets/logo.png" alt="" class="divider__emblem" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         STATS STRIP
+         ══════════════════════════════════════════════════ -->
+    <section class="section--sm" aria-label="Brand statistics">
+      <div class="container">
+        <div class="stat-strip reveal">
+          <div class="stat-item">
+            <span class="stat-item__number" data-count="37" data-suffix="+">37+</span>
+            <span class="stat-item__label" data-i18n="stats.years">ოსტატობის წელი</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item__number" data-count="4800" data-suffix="+">4800+</span>
+            <span class="stat-item__label" data-i18n="stats.pieces">შექმნილი ნივთი</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item__number" data-count="62" data-suffix="">62</span>
+            <span class="stat-item__label" data-i18n="stats.countries">ქვეყანაში მიწოდება</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item__number" data-count="18" data-suffix="">18</span>
+            <span class="stat-item__label" data-i18n="stats.awards">დიზაინის ჯილდო</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         FEATURED COLLECTIONS
+         ══════════════════════════════════════════════════ -->
+    <section class="section section--lg" id="featured" aria-labelledby="collections-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow" data-i18n="featured.eyebrow">შერჩეული სამყარო</p>
+          <h2 id="collections-heading" data-i18n="featured.title">კოლექციები</h2>
+        </div>
+
+        <div class="collections-grid">
+          <!-- Large left card -->
+          <a href="collection.html" class="collection-card collections-grid__main reveal" 
+             aria-label="Living Room collection">
+            <img src="assets/images/sofa_hero_1790075635876.jpg" 
+                 alt="Lussoni Living Room — velvet sofa with brass legs" 
+                 class="collection-card__img" />
+            <div class="collection-card__overlay">
+              <p class="collection-card__label">I</p>
+              <h3 class="collection-card__title" data-i18n="featured.living">მისაღები ოთახი</h3>
+              <div class="collection-card__cta">
+                <span data-i18n="common.explore">დათვალიერება</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Right column — stacked two -->
+          <div class="collections-grid__side">
+            <a href="collection.html" class="collection-card reveal reveal--delay-1"
+               aria-label="Dining collection">
+              <img src="assets/images/dining_table_hero_1790075658307.jpg" 
+                   alt="Lussoni Dining — walnut table with candlelight" 
+                   class="collection-card__img" />
+              <div class="collection-card__overlay">
+                <p class="collection-card__label">II</p>
+                <h3 class="collection-card__title" data-i18n="featured.dining">სასადილო</h3>
+                <div class="collection-card__cta">
+                  <span data-i18n="common.explore">დათვალიერება</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </div>
+            </a>
+
+            <a href="collection.html" class="collection-card reveal reveal--delay-2"
+               aria-label="Bedroom collection">
+              <img src="assets/images/bed_hero_1790075686213.jpg" 
+                   alt="Lussoni Bedroom — velvet bed with brass frame" 
+                   class="collection-card__img" />
+              <div class="collection-card__overlay">
+                <p class="collection-card__label">III</p>
+                <h3 class="collection-card__title" data-i18n="featured.bedroom">საძინებელი</h3>
+                <div class="collection-card__cta">
+                  <span data-i18n="common.explore">დათვალიერება</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         BESTSELLERS
+         ══════════════════════════════════════════════════ -->
+    <section class="section" aria-labelledby="bestsellers-heading">
+      <div class="container">
+        <div class="section-header section-header--row reveal">
+          <div>
+            <p class="eyebrow" data-i18n="products.eyebrow">რჩეული ნამუშევრები</p>
+            <h2 id="bestsellers-heading" data-i18n="products.title">ახალი კოლექცია</h2>
+          </div>
+          <a href="collection.html" class="btn btn--text reveal reveal--delay-2">
+            <span data-i18n="common.viewAll">ყველას ნახვა</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="products-grid" id="home-products-grid">
+
+          <div class="reveal">
+            <a href="product.html" class="product-card" id="card-1">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/armchair_hero_1790075646964.jpg" 
+                     alt="The Renard Armchair" loading="lazy" />
+                <div class="product-card__overlay">
+                  <button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button>
+                </div>
+                <span class="product-card__badge" data-i18n="common.new">ახალი</span>
+                <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__category" data-i18n="products.p1Cat">დასაჯდომი</span>
+                <h3 class="product-card__name" data-i18n="products.p1Name">სავარძელი Renard</h3>
+                <p class="product-card__materials" data-i18n="products.p1Mat">ნატურალური ტყავი · კაკალი</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">€ 3,850</span>
+                  <a href="product.html" class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</a>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="reveal reveal--delay-1">
+            <a href="product.html" class="product-card" id="card-2">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/lounge_chair_hero_1790075708615.jpg" 
+                     alt="The Nuvola Lounge Set" loading="lazy" />
+                <div class="product-card__overlay">
+                  <button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button>
+                </div>
+                <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__category" data-i18n="products.p2Cat">დასაჯდომი</span>
+                <h3 class="product-card__name" data-i18n="products.p2Name">მოსასვენებელი კომპლექტი Nuvola</h3>
+                <p class="product-card__materials" data-i18n="products.p2Mat">ბუკლეს ქსოვილი · მასიური კაკალი</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">€ 5,200</span>
+                  <a href="product.html" class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</a>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="reveal reveal--delay-2">
+            <a href="product.html" class="product-card" id="card-3">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/side_table_hero_1790075669925.jpg" 
+                     alt="Calacatta Side Table" loading="lazy" />
+                <div class="product-card__overlay">
+                  <button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button>
+                </div>
+                <span class="product-card__badge" data-i18n="common.bestseller">ბესტსელერი</span>
+                <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__category" data-i18n="products.p3Cat">მაგიდები</span>
+                <h3 class="product-card__name" data-i18n="products.p3Name">ჟურნალის მაგიდა Calacatta</h3>
+                <p class="product-card__materials" data-i18n="products.p3Mat">Calacatta მარმარილო · თითბერი</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">€ 1,680</span>
+                  <a href="product.html" class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</a>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="reveal reveal--delay-3">
+            <a href="product.html" class="product-card" id="card-4">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/shelving_hero_1790075697235.jpg" 
+                     alt="Meridian Open Shelving" loading="lazy" />
+                <div class="product-card__overlay">
+                  <button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button>
+                </div>
+                <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__category" data-i18n="products.p4Cat">სათავსო</span>
+                <h3 class="product-card__name" data-i18n="products.p4Name">ღია თაროები Meridian</h3>
+                <p class="product-card__materials" data-i18n="products.p4Mat">შავი კაკალი · თითბერის დეტალები</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">€ 4,400</span>
+                  <a href="product.html" class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</a>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         CRAFTSMANSHIP FEATURE
+         ══════════════════════════════════════════════════ -->
+    <section class="craft-section" aria-labelledby="craft-heading">
+      <div class="craft-section__img-wrap">
+        <img src="assets/images/craftsmanship_detail_1790075741368.jpg" 
+             alt="Master craftsman working on Lussoni furniture joinery" 
+             class="craft-section__img" data-parallax="0.15" />
+        <div class="craft-section__overlay"></div>
+      </div>
+
+      <div class="container craft-section__inner">
+        <div class="craft-section__content reveal">
+          <p class="eyebrow" data-i18n="craft.eyebrow">Lussoni-ის ატელიე</p>
+          <h2 id="craft-heading" class="craft-section__title" data-i18n="craft.title">
+            შექმნის<br /><em>ხელოვნება</em>
+          </h2>
+          <div class="craft-section__rule"></div>
+          <p class="craft-section__body" data-i18n="craft.body">
+            Lussoni-ის ყოველი ნაკეთობა იწყება ჩანახატით, იქცევა დიალოგად დიზაინერსა და
+            ოსტატს შორის და სრულდება საგვარეულო რელიქვიად. ჩვენ ვიყენებთ მხოლოდ
+            ეკოლოგიურად მოპოვებულ ძვირფას ხეს, ხელით დამუშავებულ ტყავს და მასიური თითბერისგან
+            ჩამოსხმულ დეტალებს — არასდროს მოოქროვილი, არასდროს აჩქარებული.
+          </p>
+          <a href="#" class="btn btn--ghost reveal reveal--delay-3" data-i18n="craft.cta">პროცესის გაცნობა</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         MATERIALS SPLIT SECTION
+         ══════════════════════════════════════════════════ -->
+    <section class="section section--lg materials-section" aria-labelledby="materials-heading">
+      <div class="container">
+        <div class="materials-split">
+          <div class="materials-split__img reveal">
+            <img src="assets/images/sofa_linen_1790075719100.jpg" 
+                 alt="Lussoni linen sofa — architectural contemporary seating" />
+            <div class="materials-split__img-frame" aria-hidden="true"></div>
+          </div>
+          <div class="materials-split__content reveal reveal--delay-2">
+            <p class="eyebrow" data-i18n="materials.eyebrow">მასალის ინტელექტი</p>
+            <h2 id="materials-heading" data-i18n="materials.title">ქსოვილი &amp; ფორმა,<br />გაერთიანებული</h2>
+            <p class="lead" style="margin-top: var(--space-5); font-size: var(--text-base); line-height: var(--leading-loose);" data-i18n="materials.body">
+              ნორმანდიის ველური სელიდან დაწყებული კორდობას მცენარეულად დამუშავებული ტყავით დამთავრებული,
+              Lussoni-ში ყოველი მასალა ირჩევა მისი ხასიათის გამო — როგორი იქნება ის არა მხოლოდ დღეს,
+              არამედ ოცდაათი წლის შემდეგაც.
+            </p>
+            <div class="materials-pills">
+              <span class="materials-pill" data-i18n="materials.pill1">სელი &amp; ბუკლე</span>
+              <span class="materials-pill" data-i18n="materials.pill2">ნატურალური ტყავი</span>
+              <span class="materials-pill" data-i18n="materials.pill3">შავი კაკალი</span>
+              <span class="materials-pill" data-i18n="materials.pill4">მასიური თითბერი</span>
+              <span class="materials-pill" data-i18n="materials.pill5">Calacatta მარმარილო</span>
+              <span class="materials-pill" data-i18n="materials.pill6">შებოლილი მუხა</span>
+            </div>
+            <a href="collection.html" class="btn btn--primary reveal reveal--delay-3" style="margin-top: var(--space-8);">
+              <span data-i18n="materials.cta">მასალის მიხედვით შერჩევა</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         TESTIMONIALS
+         ══════════════════════════════════════════════════ -->
+    <section class="section testimonials-section" aria-labelledby="testimonials-heading">
+      <div class="container container--narrow">
+        <div class="ornament reveal">
+          <div class="ornament__line"></div>
+          <img src="assets/logo.png" alt="" class="ornament__emblem" />
+          <div class="ornament__line"></div>
+        </div>
+        <h2 id="testimonials-heading" class="sr-only">Testimonials</h2>
+
+        <div class="testimonials-slider" id="testimonials-slider">
+          <div class="quote testimonials-slide active" role="group" aria-label="Testimonial 1">
+            <div class="quote__mark">"</div>
+            <p class="quote__text" data-i18n="testimonials.t1Text">
+              სავარძელი Renard ჩვენი მისაღები ოთახის სული გახდა.
+              ავეჯის შეგროვების ათწლიანი გამოცდილების განმავლობაში, არაფერი შედარებულა
+              Lussoni-ის პროპორციებისა და დასრულების სიზუსტესთან.
+            </p>
+            <div class="quote__attribution">
+              <span class="quote__name" data-i18n="testimonials.t1Author">იზაბელ ფონტენი</span>
+              <span class="quote__role" data-i18n="testimonials.t1Role">ინტერიერის დიზაინერი, პარიზი</span>
+            </div>
+          </div>
+
+          <div class="quote testimonials-slide" role="group" aria-label="Testimonial 2" aria-hidden="true">
+            <div class="quote__mark">"</div>
+            <p class="quote__text" data-i18n="testimonials.t2Text">
+              მთელი ჩვენი პენტჰაუსი Lussoni-ით მოვაწყვეთ.
+              ხარისხი შეუდარებელია — ხოლო პროცესი ისეთივე
+              პერსონალური იყო, როგორც ინდივიდუალური კოსტიუმის შეკერვა.
+            </p>
+            <div class="quote__attribution">
+              <span class="quote__name" data-i18n="testimonials.t2Author">მარკო და ჯულია ფერანტე</span>
+              <span class="quote__role" data-i18n="testimonials.t2Role">მილანი</span>
+            </div>
+          </div>
+
+          <div class="quote testimonials-slide" role="group" aria-label="Testimonial 3" aria-hidden="true">
+            <div class="quote__mark">"</div>
+            <p class="quote__text" data-i18n="testimonials.t3Text">
+              რაც Lussoni-ში ყველაზე მეტად მხიბლავს, არის თავშეკავება —
+              არაფერია გადატვირთული. ყოველ დეტალს თავისი ადგილი აქვს.
+              ეს არის ავეჯი, რომელიც პატივს სცემს სივრცეს.
+            </p>
+            <div class="quote__attribution">
+              <span class="quote__name" data-i18n="testimonials.t3Author">დევიდ თორნტონი</span>
+              <span class="quote__role" data-i18n="testimonials.t3Role">Architectural Digest, ნიუ-იორკი</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonials-dots" role="tablist" aria-label="Testimonials navigation">
+          <button class="testimonials-dot active" role="tab" aria-selected="true" aria-controls="slide-0" data-idx="0"></button>
+          <button class="testimonials-dot" role="tab" aria-selected="false" aria-controls="slide-1" data-idx="1"></button>
+          <button class="testimonials-dot" role="tab" aria-selected="false" aria-controls="slide-2" data-idx="2"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         NEWSLETTER
+         ══════════════════════════════════════════════════ -->
+    <section class="newsletter-section" aria-labelledby="newsletter-heading">
+      <div class="newsletter-section__watermark" aria-hidden="true">
+        <img src="assets/logo.png" alt="" />
+      </div>
+      <div class="container container--narrow newsletter-section__inner">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="newsletter.eyebrow">ექსკლუზიური წვდომა</p>
+          <h2 id="newsletter-heading" class="newsletter-section__title" data-i18n="newsletter.title">
+            გაიგეთ პირველმა.<br /><em>ყოველთვის.</em>
+          </h2>
+          <p class="newsletter-section__sub" data-i18n="newsletter.sub">
+            ახალი კოლექციები, დახურული ჩვენებები და საკოლექციო გამოცემები —
+            ყველაზე ადრე თქვენთან.
+          </p>
+        </div>
+        <form class="newsletter newsletter-section__form reveal reveal--delay-2" 
+              id="newsletter-form" novalidate>
+          <input 
+            type="email" 
+            class="newsletter__input" 
+            id="newsletter-email"
+            placeholder="თქვენი ელ.ფოსტის მისამართი" 
+            data-i18n-placeholder="newsletter.placeholder"
+            autocomplete="email"
+            aria-label="Email address for newsletter"
+          />
+          <button type="submit" class="newsletter__btn" data-i18n="newsletter.subscribe">გამოწერა</button>
+        </form>
+        <p class="newsletter-section__legal reveal reveal--delay-3" data-i18n="newsletter.legal">
+          გამოწერით თქვენ ეთანხმებით ჩვენს კონფიდენციალურობის პოლიტიკას. გაუქმება შესაძლებელია ნებისმიერ დროს.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         PRESS LOGOS
+         ══════════════════════════════════════════════════ -->
+    <section class="press-section section--sm" aria-labelledby="press-heading">
+      <div class="container">
+        <p class="eyebrow press-section__eyebrow reveal" data-i18n="press.eyebrow">გამოხმაურება პრესაში</p>
+        <div class="press-logos reveal reveal--delay-1" id="press-heading">
+          <span class="press-logo">AD</span>
+          <span class="press-logo">Wallpaper*</span>
+          <span class="press-logo">Dezeen</span>
+          <span class="press-logo">Elle Décor</span>
+          <span class="press-logo">FT Weekend</span>
+          <span class="press-logo">Vogue Living</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+
+        <div class="footer__brand">
+          <img src="assets/logo.png" alt="Lussoni lion emblem" class="footer__brand-emblem" />
+          <p class="footer__brand-name">Lussoni</p>
+          <p class="footer__brand-tagline" data-i18n="footer.tagline">
+            გამორჩეული ავეჯი გამორჩეული სივრცეებისთვის.
+            დამზადებულია იტალიაში 1987 წლიდან.
+          </p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.852 0 1.265.64 1.265 1.408 0 .858-.546 2.14-.828 3.33-.236.995.499 1.806 1.476 1.806 1.771 0 3.132-1.867 3.132-4.562 0-2.387-1.715-4.057-4.163-4.057-2.837 0-4.5 2.128-4.5 4.328 0 .857.33 1.774.742 2.276a.3.3 0 0 1 .069.286c-.076.313-.244.995-.277 1.134-.044.183-.146.222-.337.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.967-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <p class="footer__col-title" data-i18n="footer.colCollections">კოლექციები</p>
+          <ul class="footer__col-links">
+            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.livingRoom">მისაღები ოთახი</a></li>
+            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.diningRoom">სასადილო ოთახი</a></li>
+            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.bedroom">საძინებელი</a></li>
+            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.homeOffice">სამუშაო კაბინეტი</a></li>
+            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.outdoor">ღია სივრცე</a></li>
+            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.newArrivals">ახალი კოლექცია</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <p class="footer__col-title" data-i18n="footer.colServices">სერვისები</p>
+          <ul class="footer__col-links">
+            <li><a href="#" class="footer__col-link" data-i18n="footer.bespoke">ინდივიდუალური შეკვეთები</a></li>
+            <li><a href="#" class="footer__col-link" data-i18n="footer.consultation">ინტერიერის კონსულტაცია</a></li>
+            <li><a href="#" class="footer__col-link" data-i18n="footer.whiteGlove">პრემიუმ მიწოდება (White Glove)</a></li>
+            <li><a href="#" class="footer__col-link" data-i18n="footer.tradeProgramme">პარტნიორული პროგრამა</a></li>
+            <li><a href="#" class="footer__col-link" data-i18n="footer.restoration">რესტავრაცია</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <p class="footer__col-title" data-i18n="footer.colCompany">კომპანია</p>
+          <ul class="footer__col-links">
+            <li><a href="#" class="footer__col-link" data-i18n="footer.ourStory">ჩვენი ისტორია</a></li>
+            <li><a href="#" class="footer__col-link" data-i18n="footer.atelier">ატელიე</a></li>
+            <li><a href="#" class="footer__col-link" data-i18n="footer.press">პრესა</a></li>
+            <li><a href="#" class="footer__col-link" data-i18n="footer.careers">კარიერა</a></li>
+            <li><a href="#" class="footer__col-link" data-i18n="footer.contact">კონტაქტი</a></li>
+            <li><a href="#" class="footer__col-link" data-i18n="footer.showrooms">შოურუმები</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright" data-i18n="footer.copyright">© 2026 Lussoni S.p.A. ყველა უფლება დაცულია.</p>
+        <nav class="footer__bottom-links" aria-label="Legal links">
+          <a href="#" class="footer__bottom-link" data-i18n="footer.privacy">კონფიდენციალურობა</a>
+          <a href="#" class="footer__bottom-link" data-i18n="footer.cookies">Cookie პოლიტიკა</a>
+          <a href="#" class="footer__bottom-link" data-i18n="footer.terms">გაყიდვის პირობები</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toaster" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- JS -->
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

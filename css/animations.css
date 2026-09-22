@@ -1,0 +1,135 @@
+/* ============================================================
+   LUSSONI — Animations & Keyframes
+   ============================================================ */
+
+/* ── Loader animations ──────────────────────────────────── */
+@keyframes loader-pulse {
+  0%, 100% { opacity: 0.5; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes loader-fade {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@keyframes loader-bar {
+  0% { left: -100%; }
+  100% { left: 0; }
+}
+
+/* ── Fade In ─────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Scale In ───────────────────────────────────────────── */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ── Draw line ──────────────────────────────────────────── */
+@keyframes drawLine {
+  from { width: 0; }
+  to   { width: 60px; }
+}
+
+/* ── Shimmer (loading skeleton) ─────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+/* ── Hero text reveal ───────────────────────────────────── */
+@keyframes heroReveal {
+  0%   { opacity: 0; transform: translateY(40px) skewY(2deg); }
+  100% { opacity: 1; transform: translateY(0) skewY(0); }
+}
+
+/* ── Subtle float ───────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+/* ── Rotation ───────────────────────────────────────────── */
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Gold pulse ─────────────────────────────────────────── */
+@keyframes goldPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200, 168, 75, 0.3); }
+  50%       { box-shadow: 0 0 0 12px rgba(200, 168, 75, 0); }
+}
+
+/* ── Emblem watermark float ─────────────────────────────── */
+@keyframes watermarkFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%       { transform: translateY(-15px) scale(1.005); }
+}
+
+/* ── Page transition ────────────────────────────────────── */
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Utility classes ────────────────────────────────────── */
+.anim-fade-in     { animation: fadeIn 0.6s var(--ease-luxury) both; }
+.anim-fade-in-up  { animation: fadeInUp 0.8s var(--ease-luxury) both; }
+.anim-scale-in    { animation: scaleIn 0.6s var(--ease-spring) both; }
+.anim-float       { animation: float 6s ease-in-out infinite; }
+
+.anim-delay-1 { animation-delay: 0.15s; }
+.anim-delay-2 { animation-delay: 0.3s; }
+.anim-delay-3 { animation-delay: 0.45s; }
+.anim-delay-4 { animation-delay: 0.6s; }
+.anim-delay-5 { animation-delay: 0.8s; }
+
+/* ── Page entry ─────────────────────────────────────────── */
+main {
+  animation: pageEnter 0.9s var(--ease-luxury) both;
+  animation-delay: 0.1s;
+}
+
+/* ── Skeleton loading ───────────────────────────────────── */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--clr-bg-surface) 25%,
+    var(--clr-bg-raised) 50%,
+    var(--clr-bg-surface) 75%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+/* ── Hover lift ─────────────────────────────────────────── */
+.hover-lift {
+  transition: transform var(--dur-mid) var(--ease-luxury);
+}
+.hover-lift:hover { transform: translateY(-3px); }
+
+/* ── Gold glow on hover ─────────────────────────────────── */
+.hover-glow:hover {
+  box-shadow: var(--shadow-gold);
+}

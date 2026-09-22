@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.productTitle">სავარძელი Renard — Lussoni</title>
+  <meta name="description" data-i18n="meta.productDesc" content="სავარძელი Renard Lussoni-ისგან — უმაღლესი ხარისხის კონიაკისფერი ტყავი და ხელით ნაკვეთი კაკლის კარკასი. მზადდება შეკვეთით მილანის ატელიეში. €3,850-დან." />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/product.css" />
+</head>
+<body>
+
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <div id="loader" role="status" aria-label="Loading">
+    <img src="assets/logo.png" alt="" class="loader__emblem" />
+    <div class="loader__bar"></div>
+    <span class="loader__text">Lussoni</span>
+  </div>
+
+  <!-- ── Navigation ───────────────────────────────────── -->
+  <nav class="nav" aria-label="Primary navigation">
+    <a href="index.html" class="nav__logo" aria-label="Lussoni home">
+      <img src="assets/logo.png" alt="Lussoni lion emblem" class="nav__logo-img" />
+      <span class="nav__logo-text">Lussoni</span>
+    </a>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html" class="nav__link" data-i18n="nav.home">მთავარი</a></li>
+      <li><a href="collection.html" class="nav__link active" data-i18n="nav.collections">კოლექციები</a></li>
+      <li><a href="collection.html" class="nav__link" data-i18n="nav.living">მისაღები</a></li>
+      <li><a href="collection.html" class="nav__link" data-i18n="nav.dining">სასადილო</a></li>
+      <li><a href="collection.html" class="nav__link" data-i18n="nav.bedroom">საძინებელი</a></li>
+      <li><a href="#about" class="nav__link" data-i18n="nav.atelier">ატელიე</a></li>
+    </ul>
+    <div class="nav__actions">
+      <!-- Language Switcher -->
+      <div class="lang-switcher" role="group" aria-label="Language selection">
+        <button type="button" class="lang-switcher__btn active" data-lang="ka" aria-label="ქართული">ქარ</button>
+        <span class="lang-switcher__divider" aria-hidden="true">/</span>
+        <button type="button" class="lang-switcher__btn" data-lang="en" aria-label="English">EN</button>
+      </div>
+
+      <button class="nav__icon-btn" aria-label="Search" data-i18n-aria="nav.searchAria">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="nav__icon-btn" aria-label="Wishlist" data-i18n-aria="nav.wishlistAria">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+      <button class="nav__icon-btn" aria-label="Cart" data-i18n-aria="nav.cartAria" id="nav-cart-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="nav__cart-count" aria-hidden="true" id="cart-count-badge">0</span>
+      </button>
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Open menu" data-i18n-aria="nav.menuAria">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" id="mobile-nav">
+    <a href="index.html" class="nav__mobile-link" data-i18n="nav.home">მთავარი</a>
+    <a href="collection.html" class="nav__mobile-link" data-i18n="nav.collections">კოლექციები</a>
+    <a href="collection.html" class="nav__mobile-link" data-i18n="nav.living">მისაღები</a>
+    <a href="collection.html" class="nav__mobile-link" data-i18n="nav.dining">სასადილო</a>
+    <a href="collection.html" class="nav__mobile-link" data-i18n="nav.bedroom">საძინებელი</a>
+    <div class="nav__mobile-lang" role="group" aria-label="Language selection">
+      <button type="button" class="lang-switcher__btn active" data-lang="ka">ქართული</button>
+      <span class="lang-switcher__divider" aria-hidden="true">/</span>
+      <button type="button" class="lang-switcher__btn" data-lang="en">English</button>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ── Breadcrumb ─────────────────────────────────── -->
+    <div class="container" style="padding-top: calc(66px + var(--space-6))">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html" data-i18n="productPage.breadcrumbHome">მთავარი</a>
+        <span class="breadcrumb__sep">›</span>
+        <a href="collection.html" data-i18n="productPage.breadcrumbCollections">კოლექციები</a>
+        <span class="breadcrumb__sep">›</span>
+        <a href="collection.html" data-i18n="productPage.breadcrumbSeating">დასაჯდომი</a>
+        <span class="breadcrumb__sep">›</span>
+        <span class="breadcrumb__current" data-i18n="products.p1Name">სავარძელი Renard</span>
+      </nav>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         PRODUCT DETAIL
+         ══════════════════════════════════════════════════ -->
+    <section class="section product-detail" aria-labelledby="product-name">
+      <div class="container">
+        <div class="product-layout">
+
+          <!-- ── Gallery ──────────────────────────────── -->
+          <div class="product-layout__gallery anim-fade-in">
+            <div class="gallery">
+              <div class="gallery__main" id="gallery-main" aria-label="Product main image">
+                <img id="gallery-main-img"
+                     src="assets/images/armchair_hero_1790075646964.jpg"
+                     alt="The Renard Armchair — front view" />
+              </div>
+              <div class="gallery__thumbs" role="list" aria-label="Product thumbnails">
+                <button class="gallery__thumb active" data-src="assets/images/armchair_hero_1790075646964.jpg" aria-label="View 1" role="listitem">
+                  <img src="assets/images/armchair_hero_1790075646964.jpg" alt="Armchair front view" />
+                </button>
+                <button class="gallery__thumb" data-src="assets/images/lounge_chair_hero_1790075708615.jpg" aria-label="View 2" role="listitem">
+                  <img src="assets/images/lounge_chair_hero_1790075708615.jpg" alt="Armchair alternate view" />
+                </button>
+                <button class="gallery__thumb" data-src="assets/images/sofa_hero_1790075635876.jpg" aria-label="View 3" role="listitem">
+                  <img src="assets/images/sofa_hero_1790075635876.jpg" alt="In room context" />
+                </button>
+                <button class="gallery__thumb" data-src="assets/images/craftsmanship_detail_1790075741368.jpg" aria-label="Detail view" role="listitem">
+                  <img src="assets/images/craftsmanship_detail_1790075741368.jpg" alt="Craftsmanship detail" />
+                </button>
+              </div>
+            </div>
+
+            <!-- Fine gold frame accent -->
+            <div class="product-gallery-frame" aria-hidden="true"></div>
+          </div>
+
+          <!-- ── Product Info ──────────────────────────── -->
+          <div class="product-layout__info anim-fade-in anim-delay-1">
+
+            <!-- Header -->
+            <div class="product-info-header">
+              <div class="product-info-header__top">
+                <span class="eyebrow product-info__category" data-i18n="productPage.categoryEyebrow">დასაჯდომი · მზადდება შეკვეთით</span>
+                <div class="product-info__badges">
+                  <span class="product-badge product-badge--craft" data-i18n="productPage.badgeCraft">ხელნაკეთი</span>
+                  <span class="product-badge product-badge--origin" data-i18n="productPage.badgeOrigin">მილანი, იტალია</span>
+                </div>
+              </div>
+              <h1 class="product-info__name" id="product-name" data-i18n="products.p1Name">სავარძელი Renard</h1>
+              <div class="product-info__rating" aria-label="Rating: 4.9 out of 5, 47 reviews">
+                <div class="stars" aria-hidden="true">
+                  <span class="star star--full">★</span>
+                  <span class="star star--full">★</span>
+                  <span class="star star--full">★</span>
+                  <span class="star star--full">★</span>
+                  <span class="star star--half">★</span>
+                </div>
+                <span class="product-info__review-count" data-i18n="productPage.ratingText">4.9 (47 შეფასება)</span>
+              </div>
+            </div>
+
+            <hr class="rule" />
+
+            <!-- Price -->
+            <div class="product-info__price-row">
+              <span class="product-info__price" aria-label="Price: 3,850 Euros">€ 3,850</span>
+              <span class="product-info__vat" data-i18n="common.inclVat">დღგ-ს ჩათვლით</span>
+            </div>
+
+            <!-- Options -->
+            <div class="product-options">
+              <div class="product-option-group">
+                <p class="product-option-group__label">
+                  <span data-i18n="productPage.upholsteryLabel">შემოსვა</span>
+                  <span class="product-option-group__selected" id="upholstery-label" data-i18n="productPage.swatchCognac">კონიაკისფერი ტყავი</span>
+                </p>
+                <div class="product-swatches" role="radiogroup" aria-label="Choose upholstery">
+                  <button class="swatch swatch--leather swatch--cognac active" 
+                          data-label="კონიაკისფერი ტყავი"
+                          data-label-ka="კონიაკისფერი ტყავი"
+                          data-label-en="Cognac Leather"
+                          data-price="3850"
+                          role="radio" aria-checked="true" aria-label="Cognac Leather"
+                          id="swatch-cognac"></button>
+                  <button class="swatch swatch--leather swatch--noir"
+                          data-label="შავი ტყავი"
+                          data-label-ka="შავი ტყავი"
+                          data-label-en="Noir Leather"
+                          data-price="3850"
+                          role="radio" aria-checked="false" aria-label="Noir Leather"
+                          id="swatch-noir"></button>
+                  <button class="swatch swatch--fabric swatch--sage"
+                          data-label="სალბისფერი ბუკლე"
+                          data-label-ka="სალბისფერი ბუკლე"
+                          data-label-en="Sage Bouclé"
+                          data-price="3650"
+                          role="radio" aria-checked="false" aria-label="Sage Bouclé"
+                          id="swatch-sage"></button>
+                  <button class="swatch swatch--fabric swatch--ivory"
+                          data-label="სპილოსძვლისფერი სელი"
+                          data-label-ka="სპილოსძვლისფერი სელი"
+                          data-label-en="Ivory Linen"
+                          data-price="3550"
+                          role="radio" aria-checked="false" aria-label="Ivory Linen"
+                          id="swatch-ivory"></button>
+                  <button class="swatch swatch--fabric swatch--charcoal"
+                          data-label="ანთრაციტის ხავერდი"
+                          data-label-ka="ანთრაციტის ხავერდი"
+                          data-label-en="Charcoal Velvet"
+                          data-price="3700"
+                          role="radio" aria-checked="false" aria-label="Charcoal Velvet"
+                          id="swatch-charcoal"></button>
+                </div>
+              </div>
+
+              <div class="product-option-group">
+                <p class="product-option-group__label">
+                  <span data-i18n="productPage.frameLabel">კარკასის დამუშავება</span>
+                  <span class="product-option-group__selected" id="frame-label" data-i18n="productPage.swatchWalnut">დაზეთილი კაკალი</span>
+                </p>
+                <div class="product-swatches" role="radiogroup" aria-label="Choose frame finish">
+                  <button class="swatch swatch--wood swatch--walnut active"
+                          data-label="დაზეთილი კაკალი"
+                          data-label-ka="დაზეთილი კაკალი"
+                          data-label-en="Oiled Walnut"
+                          role="radio" aria-checked="true" aria-label="Oiled Walnut"
+                          id="swatch-walnut"></button>
+                  <button class="swatch swatch--wood swatch--smoked"
+                          data-label="შებოლილი მუხა"
+                          data-label-ka="შებოლილი მუხა"
+                          data-label-en="Smoked Oak"
+                          role="radio" aria-checked="false" aria-label="Smoked Oak"
+                          id="swatch-smoked"></button>
+                  <button class="swatch swatch--metal swatch--brass"
+                          data-label="მასიური თითბერი"
+                          data-label-ka="მასიური თითბერი"
+                          data-label-en="Solid Brass"
+                          role="radio" aria-checked="false" aria-label="Solid Brass"
+                          id="swatch-brass-frame"></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quantity + CTA -->
+            <div class="product-cta">
+              <div class="quantity-wrap">
+                <button class="quantity-btn" id="qty-minus" aria-label="Decrease quantity">−</button>
+                <span class="quantity-display" id="qty-display" aria-live="polite">1</span>
+                <button class="quantity-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+              </div>
+              <button class="btn btn--primary btn--lg product-add-btn" id="add-to-cart-btn" style="flex: 1">
+                <span data-i18n="common.addToCart">კალათაში დამატება</span>
+              </button>
+              <button class="product-wishlist-btn" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist" id="wishlist-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+
+            <!-- Delivery info strip -->
+            <div class="product-delivery-strip">
+              <div class="delivery-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3m-7 11h.01M20 17H7m13 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/></svg>
+                <span data-i18n="productPage.delivery1">პრემიუმ მიწოდება (White Glove) — 6–8 კვირა</span>
+              </div>
+              <div class="delivery-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <span data-i18n="productPage.delivery2">უფასო აწყობა და მონტაჟი</span>
+              </div>
+              <div class="delivery-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span data-i18n="productPage.delivery3">ოსტატობის 10-წლიანი გარანტია</span>
+              </div>
+            </div>
+
+            <hr class="rule" />
+
+            <!-- Accordion -->
+            <div class="accordion" role="region" aria-label="Product details">
+
+              <div class="accordion__item open">
+                <button class="accordion__trigger" id="desc-trigger" aria-controls="desc-body" aria-expanded="true">
+                  <span data-i18n="productPage.descTitle">აღწერა</span>
+                  <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="accordion__body" id="desc-body" role="region" aria-labelledby="desc-trigger">
+                  <div class="accordion__content" data-i18n="productPage.descContent">
+                    სავარძელი Renard-ი თავისი სამეფო დგომით გამოირჩევა — თავშეკავებული ავტორიტეტი,
+                    რომელიც გამოიხატება ღრმად ჩაკერილი საზურგითა და სკულპტურული კაკლის კარკასით.
+                    კორდობას მცენარეულად დამუშავებული ნატურალური ტყავი ათწლეულების განმავლობაში
+                    იძენს განუმეორებელ პატინას. ხის შეერთებები ხელით იჭრება ჩვენს მილანურ ატელიეში
+                    და მუშავდება ბუნებრივი ზეთებით.<br /><br />
+                    ნივთი თაობებისთვის.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__trigger" id="spec-trigger" aria-controls="spec-body" aria-expanded="false">
+                  <span data-i18n="productPage.specTitle">ზომები &amp; სპეციფიკაციები</span>
+                  <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="accordion__body" id="spec-body">
+                  <div class="accordion__content">
+                    <div class="spec-grid">
+                      <div class="spec-row"><span class="spec-label" data-i18n="productPage.specWidth">სიგანე</span><span class="spec-value">82 cm</span></div>
+                      <div class="spec-row"><span class="spec-label" data-i18n="productPage.specDepth">სიღრმე</span><span class="spec-value">88 cm</span></div>
+                      <div class="spec-row"><span class="spec-label" data-i18n="productPage.specHeight">სიმაღლე</span><span class="spec-value">106 cm</span></div>
+                      <div class="spec-row"><span class="spec-label" data-i18n="productPage.specSeatHeight">დასაჯდომის სიმაღლე</span><span class="spec-value">47 cm</span></div>
+                      <div class="spec-row"><span class="spec-label" data-i18n="productPage.specWeight">წონა</span><span class="spec-value">34 kg</span></div>
+                      <div class="spec-row"><span class="spec-label" data-i18n="productPage.specFrame">კარკასი</span><span class="spec-value" data-i18n="productPage.specFrameVal">მასიური შავი კაკალი</span></div>
+                      <div class="spec-row"><span class="spec-label" data-i18n="productPage.specUpholstery">შემოსვა</span><span class="spec-value" data-i18n="productPage.specUpholsteryVal">ნატურალური ტყავი</span></div>
+                      <div class="spec-row"><span class="spec-label" data-i18n="productPage.specFilling">შიგთავსი</span><span class="spec-value" data-i18n="productPage.specFillingVal">მაღალი სიმკვრივის ქაფი + ფრთა</span></div>
+                      <div class="spec-row"><span class="spec-label" data-i18n="productPage.specOrigin">წარმოშობა</span><span class="spec-value" data-i18n="productPage.specOriginVal">ხელნაკეთი მილანში, იტალია</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__trigger" id="care-trigger" aria-controls="care-body" aria-expanded="false">
+                  <span data-i18n="productPage.careTitle">მოვლა &amp; ექსპლუატაცია</span>
+                  <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="accordion__body" id="care-body">
+                  <div class="accordion__content" data-i18n="productPage.careContent">
+                    Renard-ის ტყავი ბუნებრივია და დროთა განმავლობაში იძენს ულამაზეს პატინას.
+                    გაწმინდეთ ოდნავ ნესტიანი ქსოვილით და წაუსვით ტყავის სპეციალური კონდიციონერი
+                    6 თვეში ერთხელ. მოარიდეთ მზის პირდაპირ სხივებს და სითბოს წყაროებს.
+                    კაკლის კარკასი პერიოდულად უნდა დამუშავდეს სელის ან ტუნგის ზეთით.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion__item">
+                <button class="accordion__trigger" id="delivery-trigger" aria-controls="delivery-body" aria-expanded="false">
+                  <span data-i18n="productPage.delTitle">მიწოდება &amp; დაბრუნება</span>
+                  <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </button>
+                <div class="accordion__body" id="delivery-body">
+                  <div class="accordion__content" data-i18n="productPage.delContent">
+                    Lussoni-ის ყველა ნივთი მზადდება ინდივიდუალური შეკვეთით და იგზავნება 6–8 კვირის ვადაში.
+                    ჩვენ გთავაზობთ უფასო პრემიუმ მიწოდებას (White Glove) — ჩვენი გუნდი ამოალაგებს,
+                    ააწყობს და დადგამს თქვენს ნივთს, და გაიტანს ყველა შესაფუთ მასალას.<br /><br />
+                    რადგან ეს ნივთი მზადდება შეკვეთით, დაბრუნება არ მიიღება, გარდა საწარმოო დეფექტისა,
+                    რომელსაც ფარავს ჩვენი 10-წლიანი გარანტია. ინდივიდუალური შეკვეთებისთვის გთხოვთ
+                    პირდაპირ დაუკავშირდეთ ჩვენს ატელიეს.
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /.accordion -->
+
+          </div><!-- /.product-layout__info -->
+        </div><!-- /.product-layout -->
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         COMPLETE THE LOOK
+         ══════════════════════════════════════════════════ -->
+    <section class="section complete-look" aria-labelledby="complete-look-heading">
+      <div class="container">
+        <div class="ornament reveal">
+          <div class="ornament__line"></div>
+          <img src="assets/logo.png" alt="" class="ornament__emblem" />
+          <div class="ornament__line"></div>
+        </div>
+
+        <div class="section-header reveal">
+          <p class="eyebrow" data-i18n="productPage.relatedEyebrow">შერჩეული კომბინაციები</p>
+          <h2 id="complete-look-heading" data-i18n="productPage.relatedTitle">შეავსეთ კომპოზიცია</h2>
+        </div>
+
+        <div class="related-grid">
+
+          <div class="reveal">
+            <a href="product.html" class="product-card" id="related-1">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/side_table_hero_1790075669925.jpg" alt="Calacatta Side Table" loading="lazy" />
+                <div class="product-card__overlay"><button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button></div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__category" data-i18n="products.p3Cat">მაგიდები</span>
+                <h3 class="product-card__name" data-i18n="products.p3Name">ჟურნალის მაგიდა Calacatta</h3>
+                <p class="product-card__materials" data-i18n="products.p3Mat">Calacatta მარმარილო · თითბერი</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">€ 1,680</span>
+                  <span class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="reveal reveal--delay-1">
+            <a href="product.html" class="product-card" id="related-2">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/shelving_hero_1790075697235.jpg" alt="Meridian Shelving" loading="lazy" />
+                <div class="product-card__overlay"><button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button></div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__category" data-i18n="products.p4Cat">სათავსო</span>
+                <h3 class="product-card__name" data-i18n="products.p4Name">ღია თაროები Meridian</h3>
+                <p class="product-card__materials" data-i18n="products.p4Mat">შავი კაკალი · თითბერის დეტალები</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">€ 4,400</span>
+                  <span class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="reveal reveal--delay-2">
+            <a href="product.html" class="product-card" id="related-3">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/lounge_chair_hero_1790075708615.jpg" alt="Nuvola Lounge Set" loading="lazy" />
+                <div class="product-card__overlay"><button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button></div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__category" data-i18n="products.p2Cat">დასაჯდომი</span>
+                <h3 class="product-card__name" data-i18n="products.p2Name">მოსასვენებელი კომპლექტი Nuvola</h3>
+                <p class="product-card__materials" data-i18n="products.p2Mat">ბუკლეს ქსოვილი · მასიური კაკალი</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">€ 5,200</span>
+                  <span class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="reveal reveal--delay-3">
+            <a href="product.html" class="product-card" id="related-4">
+              <div class="product-card__image-wrap">
+                <img src="assets/images/sofa_hero_1790075635876.jpg" alt="The Velours Sofa" loading="lazy" />
+                <div class="product-card__overlay"><button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button></div>
+              </div>
+              <div class="product-card__info">
+                <span class="product-card__category" data-i18n="products.p6Cat">დასაჯდომი</span>
+                <h3 class="product-card__name" data-i18n="products.p6Name">დივანი Velours</h3>
+                <p class="product-card__materials" data-i18n="products.p6Mat">ხავერდი · თითბერის ფეხები</p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">€ 7,800</span>
+                  <span class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         REVIEWS
+         ══════════════════════════════════════════════════ -->
+    <section class="section reviews-section" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="reviews-header reveal">
+          <div>
+            <p class="eyebrow" data-i18n="productPage.reviewsEyebrow">კლიენტების გამოხმაურებები</p>
+            <h2 id="reviews-heading" data-i18n="productPage.reviewsTitle">შეფასებები</h2>
+          </div>
+          <div class="reviews-summary" aria-label="Overall rating: 4.9 out of 5">
+            <span class="reviews-summary__score">4.9</span>
+            <div>
+              <div class="stars" aria-hidden="true">
+                <span class="star star--full">★</span>
+                <span class="star star--full">★</span>
+                <span class="star star--full">★</span>
+                <span class="star star--full">★</span>
+                <span class="star star--half">★</span>
+              </div>
+              <p class="reviews-summary__count" data-i18n="productPage.reviewsSummary">47 შეფასების საფუძველზე</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+
+          <article class="review-card reveal" aria-label="Review by Charlotte B.">
+            <div class="review-card__stars" aria-label="5 stars">
+              <span class="star star--full">★</span><span class="star star--full">★</span>
+              <span class="star star--full">★</span><span class="star star--full">★</span>
+              <span class="star star--full">★</span>
+            </div>
+            <p class="review-card__text" data-i18n="productPage.rev1Text">
+              „ოსტატობა არაჩვეულებრივია. ექვსი თვის შემდეგ ტყავი უკვე საოცარ ხასიათს იძენს. ამ სავარძელში არაფერია სტანდარტული — ისე გამოიყურება, თითქოს სპეციალურად ჩვენი სახლისთვის შეიქმნა.“
+            </p>
+            <div class="review-card__attribution">
+              <span class="review-card__name" data-i18n="productPage.rev1Author">შარლოტ ბ.</span>
+              <span class="review-card__location" data-i18n="productPage.rev1Loc">ლონდონი, გაერთიანებული სამეფო</span>
+            </div>
+            <time class="review-card__date" datetime="2026-04-12" data-i18n="productPage.rev1Date">აპრილი 2026</time>
+          </article>
+
+          <article class="review-card reveal reveal--delay-1" aria-label="Review by Matteo R.">
+            <div class="review-card__stars" aria-label="5 stars">
+              <span class="star star--full">★</span><span class="star star--full">★</span>
+              <span class="star star--full">★</span><span class="star star--full">★</span>
+              <span class="star star--full">★</span>
+            </div>
+            <p class="review-card__text" data-i18n="productPage.rev2Text">
+              „არაერთი ე.წ. ლუქს ბრენდისგან შემიძენია ავეჯი. Lussoni ნამდვილი შედევრია. Renard-ი ჩემს კაბინეტში დგას და პირველია, რასაც კლიენტები აღნიშნავენ. მიწოდება იყო უნაკლო.“
+            </p>
+            <div class="review-card__attribution">
+              <span class="review-card__name" data-i18n="productPage.rev2Author">მატეო რ.</span>
+              <span class="review-card__location" data-i18n="productPage.rev2Loc">მილანი, იტალია</span>
+            </div>
+            <time class="review-card__date" datetime="2026-03-08" data-i18n="productPage.rev2Date">მარტი 2026</time>
+          </article>
+
+          <article class="review-card reveal reveal--delay-2" aria-label="Review by Sophie W.">
+            <div class="review-card__stars" aria-label="4 stars">
+              <span class="star star--full">★</span><span class="star star--full">★</span>
+              <span class="star star--full">★</span><span class="star star--full">★</span>
+              <span class="star">★</span>
+            </div>
+            <p class="review-card__text" data-i18n="productPage.rev3Text">
+              „ლოდინი ყოველ დღედ ღირდა. ჩვენი სამკითხველო ოთახისთვის სპილოსძვლისფერი სელის ვარიანტი ავირჩიეთ — ქსოვილის ფაქტურა და ხარისხი ნამდვილად გამორჩეულია ამ საფასო კატეგორიაში.“
+            </p>
+            <div class="review-card__attribution">
+              <span class="review-card__name" data-i18n="productPage.rev3Author">სოფი ვ.</span>
+              <span class="review-card__location" data-i18n="productPage.rev3Loc">პარიზი, საფრანგეთი</span>
+            </div>
+            <time class="review-card__date" datetime="2026-01-22" data-i18n="productPage.rev3Date">იანვარი 2026</time>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ───────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <img src="assets/logo.png" alt="Lussoni" class="footer__brand-emblem" />
+          <p class="footer__brand-name">Lussoni</p>
+          <p class="footer__brand-tagline" data-i18n="footer.tagline">გამორჩეული ავეჯი გამორჩეული სივრცეებისთვის. დამზადებულია იტალიაში 1987 წლიდან.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="footer__social-link" aria-label="Pinterest"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/></svg></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title" data-i18n="footer.colCollections">კოლექციები</p>
+          <ul class="footer__col-links">
+            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.livingRoom">მისაღები ოთახი</a></li>
+            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.diningRoom">სასადილო ოთახი</a></li>
+            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.bedroom">საძინებელი</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title" data-i18n="footer.colServices">სერვისები</p>
+          <ul class="footer__col-links">
+            <li><a href="#" class="footer__col-link" data-i18n="footer.bespoke">ინდივიდუალური შეკვეთები</a></li>
+            <li><a href="#" class="footer__col-link" data-i18n="footer.whiteGlove">პრემიუმ მიწოდება (White Glove)</a></li>
+            <li><a href="#" class="footer__col-link" data-i18n="footer.tradeProgramme">პარტნიორული პროგრამა</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <p class="footer__col-title" data-i18n="footer.colHelp">დახმარება</p>
+          <ul class="footer__col-links">
+            <li><a href="#" class="footer__col-link" data-i18n="footer.contact">კონტაქტი</a></li>
+            <li><a href="#" class="footer__col-link" data-i18n="footer.showrooms">შოურუმები</a></li>
+            <li><a href="#" class="footer__col-link" data-i18n="footer.deliveryInfo">მიწოდების ინფორმაცია</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright" data-i18n="footer.copyright">© 2026 Lussoni S.p.A. ყველა უფლება დაცულია.</p>
+        <nav class="footer__bottom-links"><a href="#" class="footer__bottom-link" data-i18n="footer.privacy">კონფიდენციალურობა</a><a href="#" class="footer__bottom-link" data-i18n="footer.terms">პირობები</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toaster" aria-live="polite"></div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>
