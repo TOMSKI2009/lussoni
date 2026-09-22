@@ -147,6 +147,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
 }
 
 .section-header h2 {
@@ -523,9 +525,19 @@
     opacity: 0.03;
   }
 
+  .collections-grid__main {
+    height: 380px;
+  }
+
   .collections-grid__side {
-    grid-template-columns: 1fr 1fr;
-    height: 260px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    height: auto;
+    gap: var(--space-4);
+  }
+
+  .collections-grid__side .collection-card {
+    height: 280px;
   }
 
   .craft-section {
@@ -547,13 +559,12 @@
     grid-template-columns: 1fr;
   }
 
-  .collections-grid__side {
-    grid-template-columns: 1fr;
-    height: auto;
+  .collections-grid__main {
+    height: 320px;
   }
 
   .collections-grid__side .collection-card {
-    height: 260px;
+    height: 240px;
   }
 
   .hero__actions {

@@ -41,7 +41,7 @@
         explore: "დათვალიერება",
         view: "ნახვა →",
         quickView: "სწრაფი ნახვა",
-        new: "ახალი",
+        new: "ახალი კოლექცია",
         bestseller: "ბესტსელერი",
         scroll: "ჩამოშლა",
         viewAll: "ყველას ნახვა",
@@ -80,8 +80,8 @@
         eyebrow: "შერჩეული სამყარო",
         title: "კოლექციები",
         living: "პირსაბანის ტუმბოები",
-        dining: "სარკეები &amp; განათება",
-        bedroom: "კარადები &amp; სათავსოები"
+        dining: "სარკეები & განათება",
+        bedroom: "კარადები & სათავსოები"
       },
 
       // Homepage & Shared: Products
@@ -125,7 +125,7 @@
       // Homepage: Materials
       materials: {
         eyebrow: "მასალის ინტელექტი",
-        title: "მარმარილო &amp; კაკალი,<br />გაერთიანებული",
+        title: "მარმარილო & კაკალი,<br />გაერთიანებული",
         body: "კარარასა და ვერონას უიშვიათესი მარმარილოს კარიერებიდან დაწყებული ათწლეულობით გამომშრალი წყალგამძლე კაკლით დამთავრებული, Lussoni-ში ყოველი მასალა ირჩევა წყალთან და ორთქლთან იდეალური ჰარმონიისთვის — ისე, რომ ოცდაათი წლის შემდეგაც ისეთივე შთამბეჭდავი იყოს, როგორც მონტაჟის პირველ დღეს.",
         pill1: "Calacatta Viola მარმარილო",
         pill2: "Nero Marquina მარმარილო",
@@ -172,17 +172,17 @@
         colCompany: "კომპანია",
         colHelp: "დახმარება",
         livingRoom: "პირსაბანის ტუმბოები",
-        diningRoom: "სარკეები &amp; განათება",
-        bedroom: "კარადები &amp; სათავსოები",
+        diningRoom: "სარკეები & განათება",
+        bedroom: "კარადები & სათავსოები",
         homeOffice: "კედლის კონსოლები",
         outdoor: "მონოლითური აბაზანები",
-        storage: "სანტექნიკა &amp; აქსესუარები",
+        storage: "სანტექნიკა & აქსესუარები",
         newArrivals: "ახალი კოლექცია",
         bespoke: "ინდივიდუალური ზომები",
         consultation: "დიზაინერის კონსულტაცია",
-        whiteGlove: "პრემიუმ მიწოდება &amp; მონტაჟი",
+        whiteGlove: "პრემიუმ მიწოდება & მონტაჟი",
         tradeProgramme: "არქიტექტორთა პროგრამა",
-        restoration: "მარმარილოს მოვლა &amp; რესტავრაცია",
+        restoration: "მარმარილოს მოვლა & რესტავრაცია",
         ourStory: "ჩვენი ისტორია",
         atelier: "ატელიე",
         press: "პრესა",
@@ -254,7 +254,7 @@
         badgeOrigin: "მილანი, იტალია",
         ratingText: "4.9 (47 შეფასება)",
         upholsteryLabel: "მარმარილოს ზედაპირი",
-        frameLabel: "კარადის ხე &amp; საფარი",
+        frameLabel: "კარადის ხე & საფარი",
         swatchCognac: "Calacatta Viola მარმარილო",
         swatchNoir: "Nero Marquina მარმარილო",
         swatchSage: "Statuario თეთრი მარმარილო",
@@ -268,7 +268,7 @@
         delivery3: "ოსტატობის 10-წლიანი გარანტია",
         descTitle: "აღწერა",
         descContent: "ორმაგი ტუმბო Renard-ი შექმნილია როგორც სააბაზანო სივრცის მონუმენტური არქიტექტურული ცენტრი. ზედაპირი გამოკვეთილია 30მმ სისქის იტალიური Calacatta Viola მარმარილოს ერთიანი ბლოკისგან, რომელსაც ავსებს ორი ინტეგრირებული მარმარილოს პირსაბანი და თითბერის სანიაღვრე დეტალები. კარადა დამზადებულია ხელით ნაკვეთი ვერტიკალური კაკლის კანელურებით (fluting), აღჭურვილია Blum-ის რბილად დამხურავი უჯრებით და დამუშავებულია ეკოლოგიური წყალგამძლე ზეთებით.<br /><br />რელიქვია თქვენი სააბაზანო საკურთხევლისთვის.",
-        specTitle: "ზომები &amp; სპეციფიკაციები",
+        specTitle: "ზომები & სპეციფიკაციები",
         specWidth: "სიგანე",
         specDepth: "სიღრმე",
         specHeight: "სიმაღლე",
@@ -282,9 +282,9 @@
         specFillingVal: "მასიური თითბერი + Blum Soft-Close",
         specOrigin: "წარმოშობა",
         specOriginVal: "ხელნაკეთი მილანში, იტალია",
-        careTitle: "მოვლა &amp; ექსპლუატაცია",
+        careTitle: "მოვლა & ექსპლუატაცია",
         careContent: "Calacatta Viola მარმარილო ქარხნულად გაჟღენთილია ჰიდროფობიური დამცავი ფენით. ყოველდღიური მოვლისთვის გამოიყენეთ რბილი ქსოვილი და ნეიტრალური pH საწმენდი საშუალებები. მოერიდეთ მჟავე და აბრაზიულ ხსნარებს. კაკლის კანელურები წელიწადში ერთხელ შეგიძლიათ განაახლოთ ბუნებრივი მინერალური ან ტუნგის ზეთით.",
-        delTitle: "მიწოდება &amp; მონტაჟი",
+        delTitle: "მიწოდება & მონტაჟი",
         delContent: "Lussoni-ის სააბაზანოს ყველა ნივთი მზადდება ინდივიდუალური შეკვეთით და იგზავნება 6–8 კვირის ვადაში. ჩვენ გთავაზობთ უფასო პრემიუმ White Glove მიწოდებას — ჩვენი სპეციალიზებული ჯგუფი უსაფრთხოდ ამოალაგებს, მოარგებს ადგილზე და მოამზადებს ტუმბოს სანტექნიკური შეერთებისთვის.<br /><br />საწარმოო დეფექტებს სრულად ფარავს ჩვენი 10-წლიანი საგარანტიო პროგრამა.",
         relatedEyebrow: "შერჩეული კომბინაციები",
         relatedTitle: "შეავსეთ კომპოზიცია",
@@ -345,7 +345,7 @@
         explore: "Explore",
         view: "View →",
         quickView: "Quick View",
-        new: "New",
+        new: "New Collection",
         bestseller: "Bestseller",
         scroll: "Scroll",
         viewAll: "View All",
@@ -383,9 +383,9 @@
       featured: {
         eyebrow: "Curated Worlds",
         title: "The Collections",
-        living: "Vanities &amp; Consoles",
-        dining: "Mirrors &amp; Lighting",
-        bedroom: "Cabinets &amp; Storage"
+        living: "Vanities & Consoles",
+        dining: "Mirrors & Lighting",
+        bedroom: "Cabinets & Storage"
       },
 
       // Homepage & Shared: Products
@@ -429,7 +429,7 @@
       // Homepage: Materials
       materials: {
         eyebrow: "Material Intelligence",
-        title: "Stone &amp; Timber,<br />United",
+        title: "Stone & Timber,<br />United",
         body: "From rare quarries in Carrara and Verona to decades-cured water-resilient walnut, every material at Lussoni is chosen for its eternal dialogue with water and steam — ensuring that thirty years from now, it remains as breathtaking as the day of installation.",
         pill1: "Calacatta Viola Marble",
         pill2: "Nero Marquina Marble",
@@ -475,18 +475,18 @@
         colServices: "Services",
         colCompany: "Company",
         colHelp: "Help",
-        livingRoom: "Vanities &amp; Consoles",
-        diningRoom: "Mirrors &amp; Lighting",
-        bedroom: "Cabinets &amp; Storage",
+        livingRoom: "Vanities & Consoles",
+        diningRoom: "Mirrors & Lighting",
+        bedroom: "Cabinets & Storage",
         homeOffice: "Wall Consoles",
         outdoor: "Monolithic Basins",
         storage: "Sanctuary Fixtures",
         newArrivals: "New Arrivals",
         bespoke: "Bespoke Dimensions",
         consultation: "Architectural Consultation",
-        whiteGlove: "White Glove Delivery &amp; Installation",
-        tradeProgramme: "Trade &amp; Architect Programme",
-        restoration: "Marble Care &amp; Restoration",
+        whiteGlove: "White Glove Delivery & Installation",
+        tradeProgramme: "Trade & Architect Programme",
+        restoration: "Marble Care & Restoration",
         ourStory: "Our Story",
         atelier: "Atelier",
         press: "Press",
@@ -568,11 +568,11 @@
         swatchSmoked: "Smoked Oak",
         swatchBrass: "Matte Charcoal Lacquer",
         delivery1: "White Glove Delivery — 6–8 weeks",
-        delivery2: "Complimentary Installation &amp; Fitting",
+        delivery2: "Complimentary Installation & Fitting",
         delivery3: "10-Year Craftsmanship Guarantee",
         descTitle: "Description",
         descContent: "The Renard Double Vanity stands as the monumental architectural anchor of the luxury bath sanctuary. Its monolithic countertop is carved from a solid 30mm slab of Italian Calacatta Viola marble, featuring two seamlessly undermounted marble basins and solid brass drain fixtures. The cabinetry features hand-fluted solid American walnut detailing, Blum soft-close slide mechanics, and marine-grade moisture sealants.<br /><br />An heirloom for the bath sanctuary.",
-        specTitle: "Dimensions &amp; Specifications",
+        specTitle: "Dimensions & Specifications",
         specWidth: "Width",
         specDepth: "Depth",
         specHeight: "Height",
@@ -586,13 +586,13 @@
         specFillingVal: "Solid cast brass + Blum Soft-Close",
         specOrigin: "Origin",
         specOriginVal: "Handmade in Milan, Italy",
-        careTitle: "Care &amp; Maintenance",
+        careTitle: "Care & Maintenance",
         careContent: "The Calacatta Viola marble is treated with a specialized penetrating hydrophobic sealer. For daily care, wipe clean with a soft microfiber cloth and pH-neutral stone cleanser. Avoid acidic or abrasive detergents. The fluted walnut cabinetry may be refreshed annually with natural mineral or tung oil.",
-        delTitle: "Delivery &amp; Installation",
+        delTitle: "Delivery & Installation",
         delContent: "All Lussoni bathroom pieces are made to order and dispatched within 6–8 weeks. We offer complimentary white-glove delivery — our specialized team unpacks, positions, and prepares the vanity for plumbing connections.<br /><br />Every piece is covered by our 10-year craftsmanship warranty.",
         relatedEyebrow: "Curated Pairings",
         relatedTitle: "Complete the Sanctuary",
-        reviewsEyebrow: "Architect &amp; Client Reviews",
+        reviewsEyebrow: "Architect & Client Reviews",
         reviewsTitle: "Reviews",
         reviewsSummary: "Based on 47 reviews",
         rev1Text: "\"The craftsmanship is extraordinary. The veining of the Calacatta Viola and the fluted walnut harmonize so naturally — it feels custom-commissioned for our villa. The water resistance is flawless.\"",
@@ -673,7 +673,7 @@
       const key = el.dataset.i18n;
       const text = t(key, lang);
       if (text) {
-        if (text.includes('<') && text.includes('>')) {
+        if ((text.includes('<') && text.includes('>')) || text.includes('&amp;') || text.includes('&nbsp;')) {
           el.innerHTML = text;
         } else {
           el.textContent = text;

@@ -481,14 +481,42 @@
   position: absolute;
   top: var(--space-4);
   left: var(--space-4);
+  z-index: 2;
   font-family: var(--font-sans);
-  font-size: 9px;
-  font-weight: 400;
-  letter-spacing: var(--tracking-widest);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--clr-bg-deep);
+  color: #f7eedc;
+  background: rgba(18, 18, 22, 0.78);
+  border: 1px solid rgba(201, 168, 106, 0.45);
+  border-radius: 9999px;
+  padding: 0.35rem 0.85rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  line-height: 1.2;
+  transition: all var(--dur-mid) var(--ease-luxury);
+}
+
+.product-card__badge::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
   background: var(--clr-gold-primary);
-  padding: 0.25rem 0.6rem;
+  box-shadow: 0 0 6px rgba(201, 168, 106, 0.9);
+  flex-shrink: 0;
+}
+
+.product-card:hover .product-card__badge {
+  border-color: var(--clr-gold-primary);
+  background: rgba(24, 24, 30, 0.9);
+  box-shadow: 0 4px 20px rgba(201, 168, 106, 0.3);
 }
 
 .product-card__wishlist {
@@ -613,72 +641,90 @@
 .collection-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(24,24,26,0.1) 0%, rgba(24,24,26,0.75) 100%);
+  background: linear-gradient(180deg, rgba(16,16,18,0.1) 0%, rgba(16,16,18,0.4) 45%, rgba(16,16,18,0.88) 100%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: var(--space-8);
+  padding: clamp(var(--space-4), 3vw, var(--space-8));
   transition: background var(--dur-slow) var(--ease-luxury);
 }
 
 .collection-card:hover .collection-card__overlay {
-  background: linear-gradient(180deg, rgba(24,24,26,0.05) 0%, rgba(24,24,26,0.9) 100%);
+  background: linear-gradient(180deg, rgba(16,16,18,0.05) 0%, rgba(16,16,18,0.5) 45%, rgba(16,16,18,0.92) 100%);
 }
 
 .collection-card__label {
   font-family: var(--font-sans);
   font-size: var(--text-xs);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: var(--tracking-widest);
   text-transform: uppercase;
   color: var(--clr-gold-primary);
   margin-bottom: var(--space-2);
-  transform: translateY(4px);
-  opacity: 0.7;
+  opacity: 0.85;
   transition: opacity var(--dur-mid) var(--ease-luxury),
               transform var(--dur-mid) var(--ease-luxury);
 }
 
 .collection-card:hover .collection-card__label {
   opacity: 1;
-  transform: translateY(0);
 }
 
 .collection-card__title {
   font-family: var(--font-serif);
-  font-size: clamp(var(--text-2xl), 3vw, var(--text-3xl));
+  font-size: clamp(1.25rem, 2.2vw, 1.85rem);
   font-weight: 400;
   color: var(--clr-text-primary);
   line-height: var(--leading-tight);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .collection-card__cta {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: 0.6rem;
   font-family: var(--font-sans);
-  font-size: var(--text-xs);
-  letter-spacing: var(--tracking-widest);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--clr-gold-primary);
-  transform: translateY(12px);
-  opacity: 0;
-  transition: opacity var(--dur-mid) var(--ease-luxury),
-              transform var(--dur-mid) var(--ease-luxury);
+  color: #f7eedc;
+  background: rgba(18, 18, 22, 0.72);
+  border: 1px solid rgba(201, 168, 106, 0.45);
+  border-radius: 9999px;
+  padding: 0.45rem 1.15rem;
+  width: fit-content;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  transform: translateY(0);
+  transition: background var(--dur-mid) var(--ease-luxury),
+              color var(--dur-mid) var(--ease-luxury),
+              border-color var(--dur-mid) var(--ease-luxury),
+              transform var(--dur-mid) var(--ease-luxury),
+              box-shadow var(--dur-mid) var(--ease-luxury);
 }
 
 .collection-card:hover .collection-card__cta {
-  opacity: 1;
-  transform: translateY(0);
+  background: var(--clr-gold-primary);
+  color: var(--clr-bg-deep);
+  border-color: var(--clr-gold-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 168, 106, 0.35);
 }
 
 .collection-card__cta svg {
-  transition: transform var(--dur-mid) var(--ease-luxury);
+  color: var(--clr-gold-primary);
+  transition: transform var(--dur-mid) var(--ease-luxury),
+              color var(--dur-mid) var(--ease-luxury);
 }
 
 .collection-card:hover .collection-card__cta svg {
-  transform: translateX(5px);
+  color: var(--clr-bg-deep);
+  transform: translateX(4px);
 }
 
 /* Fine gold border frame that appears on hover */
