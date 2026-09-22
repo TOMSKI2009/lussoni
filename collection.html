@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="meta.collectionTitle">ყველა კოლექცია — Lussoni ლუქს ავეჯი</title>
-  <meta name="description" data-i18n="meta.collectionDesc" content="დაათვალიერეთ Lussoni-ის სრული კოლექცია — გამორჩეული დივნები, სასადილო მაგიდები, სავარძლები, საწოლები და დეკორატიული ავეჯი, შექმნილი იტალიაში." />
+  <title data-i18n="meta.collectionTitle">ყველა კოლექცია — Lussoni ლუქს სააბაზანოს ავეჯი</title>
+  <meta name="description" data-i18n="meta.collectionDesc" content="დაათვალიერეთ Lussoni-ის სრული სააბაზანოს კოლექცია — გამორჩეული მარმარილოს ტუმბოები, განათებული სარკეები, მაღალი კარადები და ქვის სანტექნიკა, შექმნილი იტალიაში." />
   <link rel="icon" href="assets/logo.png" type="image/png" />
 
   <link rel="stylesheet" href="css/tokens.css" />
@@ -33,9 +33,9 @@
     <ul class="nav__links" role="list">
       <li><a href="index.html" class="nav__link" data-i18n="nav.home">მთავარი</a></li>
       <li><a href="collection.html" class="nav__link active" data-i18n="nav.collections">კოლექციები</a></li>
-      <li><a href="collection.html" class="nav__link" data-i18n="nav.living">მისაღები</a></li>
-      <li><a href="collection.html" class="nav__link" data-i18n="nav.dining">სასადილო</a></li>
-      <li><a href="collection.html" class="nav__link" data-i18n="nav.bedroom">საძინებელი</a></li>
+      <li><a href="collection.html" class="nav__link" data-i18n="nav.living">ტუმბოები</a></li>
+      <li><a href="collection.html" class="nav__link" data-i18n="nav.dining">სარკეები</a></li>
+      <li><a href="collection.html" class="nav__link" data-i18n="nav.bedroom">კარადები</a></li>
       <li><a href="#about" class="nav__link" data-i18n="nav.atelier">ატელიე</a></li>
     </ul>
     <div class="nav__actions">
@@ -65,9 +65,9 @@
   <div class="nav__mobile" id="mobile-nav">
     <a href="index.html" class="nav__mobile-link" data-i18n="nav.home">მთავარი</a>
     <a href="collection.html" class="nav__mobile-link" data-i18n="nav.collections">კოლექციები</a>
-    <a href="collection.html" class="nav__mobile-link" data-i18n="nav.living">მისაღები</a>
-    <a href="collection.html" class="nav__mobile-link" data-i18n="nav.dining">სასადილო</a>
-    <a href="collection.html" class="nav__mobile-link" data-i18n="nav.bedroom">საძინებელი</a>
+    <a href="collection.html" class="nav__mobile-link" data-i18n="nav.living">ტუმბოები</a>
+    <a href="collection.html" class="nav__mobile-link" data-i18n="nav.dining">სარკეები</a>
+    <a href="collection.html" class="nav__mobile-link" data-i18n="nav.bedroom">კარადები</a>
     <div class="nav__mobile-lang" role="group" aria-label="Language selection">
       <button type="button" class="lang-switcher__btn active" data-lang="ka">ქართული</button>
       <span class="lang-switcher__divider" aria-hidden="true">/</span>
@@ -80,8 +80,8 @@
     <!-- ── Collection Hero Banner ─────────────────────── -->
     <section class="collection-hero" aria-label="Collections hero">
       <div class="collection-hero__bg">
-        <img src="assets/images/sofa_linen_1790075719100.jpg" 
-             alt="Lussoni collections" class="collection-hero__img" />
+        <img src="assets/images/collection_hero_bathroom.jpg" 
+             alt="Lussoni bathroom collections" class="collection-hero__img" />
         <div class="collection-hero__overlay"></div>
       </div>
       <div class="collection-hero__watermark" aria-hidden="true">
@@ -89,9 +89,9 @@
       </div>
       <div class="container collection-hero__inner">
         <p class="eyebrow anim-fade-in anim-delay-2" data-i18n="collectionPage.eyebrow">სრული ასორტიმენტი</p>
-        <h1 class="collection-hero__title anim-fade-in-up anim-delay-2" data-i18n="collectionPage.title">ყველა კოლექცია</h1>
+        <h1 class="collection-hero__title anim-fade-in-up anim-delay-2" data-i18n="collectionPage.title">სააბაზანოს კოლექცია</h1>
         <p class="collection-hero__sub anim-fade-in-up anim-delay-3" data-i18n="collectionPage.sub">
-          ყოველი ოთახი. ყოველი ისტორია. ყოველი ნივთი შექმნილი სიცოცხლის ხანგრძლივობით.
+          სააბაზანოს რელიქვიები. შექმნილი წყალთან ჰარმონიისთვის, თაობებისთვის.
         </p>
       </div>
     </section>
@@ -101,10 +101,10 @@
       <div class="container">
         <div class="category-tabs" role="tablist">
           <button class="category-tab active" role="tab" data-category="all" aria-selected="true" id="tab-all" data-i18n="collectionPage.tabAll">ყველა</button>
-          <button class="category-tab" role="tab" data-category="seating" aria-selected="false" id="tab-seating" data-i18n="collectionPage.tabSeating">დასაჯდომი</button>
-          <button class="category-tab" role="tab" data-category="tables" aria-selected="false" id="tab-tables" data-i18n="collectionPage.tabTables">მაგიდები</button>
-          <button class="category-tab" role="tab" data-category="bedroom" aria-selected="false" id="tab-bedroom" data-i18n="collectionPage.tabBedroom">საძინებელი</button>
-          <button class="category-tab" role="tab" data-category="storage" aria-selected="false" id="tab-storage" data-i18n="collectionPage.tabStorage">სათავსო</button>
+          <button class="category-tab" role="tab" data-category="vanities" aria-selected="false" id="tab-seating" data-i18n="collectionPage.tabSeating">ტუმბოები</button>
+          <button class="category-tab" role="tab" data-category="mirrors" aria-selected="false" id="tab-tables" data-i18n="collectionPage.tabTables">სარკეები</button>
+          <button class="category-tab" role="tab" data-category="cabinets" aria-selected="false" id="tab-bedroom" data-i18n="collectionPage.tabBedroom">კარადები</button>
+          <button class="category-tab" role="tab" data-category="fixtures" aria-selected="false" id="tab-storage" data-i18n="collectionPage.tabStorage">სანტექნიკა</button>
         </div>
       </div>
     </div>
@@ -147,19 +147,19 @@
               <p class="filter-group__title" data-i18n="collectionPage.material">მასალა</p>
               <div class="filter-option">
                 <input type="checkbox" id="mat-1" name="material" value="walnut" />
-                <label for="mat-1" data-i18n="collectionPage.matWalnut">შავი კაკალი</label>
+                <label for="mat-1" data-i18n="collectionPage.matWalnut">დაზეთილი კაკალი</label>
               </div>
               <div class="filter-option">
-                <input type="checkbox" id="mat-2" name="material" value="leather" />
-                <label for="mat-2" data-i18n="collectionPage.matLeather">ნატურალური ტყავი</label>
+                <input type="checkbox" id="mat-2" name="material" value="calacatta" />
+                <label for="mat-2" data-i18n="collectionPage.matLeather">Calacatta მარმარილო</label>
               </div>
               <div class="filter-option">
-                <input type="checkbox" id="mat-3" name="material" value="linen" />
-                <label for="mat-3" data-i18n="collectionPage.matLinen">სელი &amp; ბუკლე</label>
+                <input type="checkbox" id="mat-3" name="material" value="nero-marquina" />
+                <label for="mat-3" data-i18n="collectionPage.matLinen">Nero Marquina მარმარილო</label>
               </div>
               <div class="filter-option">
-                <input type="checkbox" id="mat-4" name="material" value="marble" />
-                <label for="mat-4" data-i18n="collectionPage.matMarble">მარმარილო</label>
+                <input type="checkbox" id="mat-4" name="material" value="stone" />
+                <label for="mat-4" data-i18n="collectionPage.matMarble">ბუნებრივი ქვა</label>
               </div>
               <div class="filter-option">
                 <input type="checkbox" id="mat-5" name="material" value="brass" />
@@ -207,7 +207,7 @@
             <!-- Toolbar -->
             <div class="collection-toolbar">
               <p class="collection-toolbar__count" id="product-count">
-                <span data-i18n="collectionPage.showingPrefix">ნაჩვენებია</span> <strong>10</strong> <span data-i18n="collectionPage.piecePlural">ნივთი</span>
+                <span data-i18n="collectionPage.showingPrefix">ნაჩვენებია</span> <strong>8</strong> <span data-i18n="collectionPage.piecePlural">ნივთი</span>
               </p>
               <div class="collection-toolbar__right">
                 <div class="sort-select-wrap">
@@ -235,20 +235,20 @@
             <div class="collection-grid" id="products-grid" role="list">
 
               <!-- Product 1 -->
-              <div class="reveal" role="listitem" data-category="seating" data-price="3850">
+              <div class="reveal" role="listitem" data-category="vanities" data-price="5850">
                 <a href="product.html" class="product-card" id="col-card-1">
                   <div class="product-card__image-wrap">
-                    <img src="assets/images/armchair_hero_1790075646964.jpg" alt="The Renard Armchair" loading="lazy" />
+                    <img src="assets/images/vanity_renard.jpg" alt="The Renard Double Vanity" loading="lazy" />
                     <div class="product-card__overlay"><button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button></div>
                     <span class="product-card__badge" data-i18n="common.new">ახალი</span>
                     <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
                   </div>
                   <div class="product-card__info">
-                    <span class="product-card__category" data-i18n="products.p1Cat">დასაჯდომი</span>
-                    <h3 class="product-card__name" data-i18n="products.p1Name">სავარძელი Renard</h3>
-                    <p class="product-card__materials" data-i18n="products.p1Mat">ნატურალური ტყავი · კაკალი</p>
+                    <span class="product-card__category" data-i18n="products.p1Cat">ტუმბოები</span>
+                    <h3 class="product-card__name" data-i18n="products.p1Name">ორმაგი ტუმბო Renard</h3>
+                    <p class="product-card__materials" data-i18n="products.p1Mat">Calacatta Viola მარმარილო · დაზეთილი კაკალი</p>
                     <div class="product-card__footer">
-                      <span class="product-card__price">€ 3,850</span>
+                      <span class="product-card__price">€ 5,850</span>
                       <span class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</span>
                     </div>
                   </div>
@@ -256,19 +256,19 @@
               </div>
 
               <!-- Product 2 -->
-              <div class="reveal reveal--delay-1" role="listitem" data-category="seating" data-price="5200">
+              <div class="reveal reveal--delay-1" role="listitem" data-category="vanities" data-price="4200">
                 <a href="product.html" class="product-card" id="col-card-2">
                   <div class="product-card__image-wrap">
-                    <img src="assets/images/lounge_chair_hero_1790075708615.jpg" alt="The Nuvola Lounge Set" loading="lazy" />
+                    <img src="assets/images/vanity_nuvola.jpg" alt="The Nuvola Floating Vanity" loading="lazy" />
                     <div class="product-card__overlay"><button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button></div>
                     <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
                   </div>
                   <div class="product-card__info">
-                    <span class="product-card__category" data-i18n="products.p2Cat">დასაჯდომი</span>
-                    <h3 class="product-card__name" data-i18n="products.p2Name">მოსასვენებელი კომპლექტი Nuvola</h3>
-                    <p class="product-card__materials" data-i18n="products.p2Mat">ბუკლეს ქსოვილი · მასიური კაკალი</p>
+                    <span class="product-card__category" data-i18n="products.p2Cat">ტუმბოები</span>
+                    <h3 class="product-card__name" data-i18n="products.p2Name">დაკიდებული ტუმბო Nuvola</h3>
+                    <p class="product-card__materials" data-i18n="products.p2Mat">მუხა · შავი ქვის პირსაბანები · თითბერი</p>
                     <div class="product-card__footer">
-                      <span class="product-card__price">€ 5,200</span>
+                      <span class="product-card__price">€ 4,200</span>
                       <span class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</span>
                     </div>
                   </div>
@@ -276,80 +276,18 @@
               </div>
 
               <!-- Product 3 -->
-              <div class="reveal reveal--delay-2" role="listitem" data-category="seating" data-price="7800">
+              <div class="reveal reveal--delay-2" role="listitem" data-category="mirrors" data-price="1680">
                 <a href="product.html" class="product-card" id="col-card-3">
                   <div class="product-card__image-wrap">
-                    <img src="assets/images/sofa_hero_1790075635876.jpg" alt="The Velours Sofa" loading="lazy" />
+                    <img src="assets/images/mirror_aura.jpg" alt="Aura Illuminated Mirror" loading="lazy" />
                     <div class="product-card__overlay"><button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button></div>
                     <span class="product-card__badge" data-i18n="common.bestseller">ბესტსელერი</span>
                     <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
                   </div>
                   <div class="product-card__info">
-                    <span class="product-card__category" data-i18n="products.p6Cat">დასაჯდომი</span>
-                    <h3 class="product-card__name" data-i18n="products.p6Name">დივანი Velours</h3>
-                    <p class="product-card__materials" data-i18n="products.p6Mat">ხავერდი · თითბერის ფეხები</p>
-                    <div class="product-card__footer">
-                      <span class="product-card__price">€ 7,800</span>
-                      <span class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Product 4 -->
-              <div class="reveal reveal--delay-3" role="listitem" data-category="seating" data-price="6200">
-                <a href="product.html" class="product-card" id="col-card-4">
-                  <div class="product-card__image-wrap">
-                    <img src="assets/images/sofa_linen_1790075719100.jpg" alt="The Palazzo Sofa" loading="lazy" />
-                    <div class="product-card__overlay"><button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button></div>
-                    <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-                  </div>
-                  <div class="product-card__info">
-                    <span class="product-card__category" data-i18n="products.p7Cat">დასაჯდომი</span>
-                    <h3 class="product-card__name" data-i18n="products.p7Name">დივანი Palazzo</h3>
-                    <p class="product-card__materials" data-i18n="products.p7Mat">ბელგიური სელი · შებოლილი მუხა</p>
-                    <div class="product-card__footer">
-                      <span class="product-card__price">€ 6,200</span>
-                      <span class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Product 5 -->
-              <div class="reveal" role="listitem" data-category="tables" data-price="8900">
-                <a href="product.html" class="product-card" id="col-card-5">
-                  <div class="product-card__image-wrap">
-                    <img src="assets/images/dining_table_hero_1790075658307.jpg" alt="Ovale Dining Table" loading="lazy" />
-                    <div class="product-card__overlay"><button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button></div>
-                    <span class="product-card__badge" data-i18n="common.new">ახალი</span>
-                    <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-                  </div>
-                  <div class="product-card__info">
-                    <span class="product-card__category" data-i18n="products.p5Cat">სასადილო</span>
-                    <h3 class="product-card__name" data-i18n="products.p5Name">სასადილო მაგიდა Ovale</h3>
-                    <p class="product-card__materials" data-i18n="products.p5Mat">მუქი კაკალი · თითბერი</p>
-                    <div class="product-card__footer">
-                      <span class="product-card__price">€ 8,900</span>
-                      <span class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Product 6 -->
-              <div class="reveal reveal--delay-1" role="listitem" data-category="tables" data-price="1680">
-                <a href="product.html" class="product-card" id="col-card-6">
-                  <div class="product-card__image-wrap">
-                    <img src="assets/images/side_table_hero_1790075669925.jpg" alt="Calacatta Side Table" loading="lazy" />
-                    <div class="product-card__overlay"><button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button></div>
-                    <span class="product-card__badge" data-i18n="common.bestseller">ბესტსელერი</span>
-                    <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
-                  </div>
-                  <div class="product-card__info">
-                    <span class="product-card__category" data-i18n="products.p3Cat">მაგიდები</span>
-                    <h3 class="product-card__name" data-i18n="products.p3Name">ჟურნალის მაგიდა Calacatta</h3>
-                    <p class="product-card__materials" data-i18n="products.p3Mat">Calacatta მარმარილო · თითბერი</p>
+                    <span class="product-card__category" data-i18n="products.p3Cat">სარკეები</span>
+                    <h3 class="product-card__name" data-i18n="products.p3Name">განათებული სარკე Aura</h3>
+                    <p class="product-card__materials" data-i18n="products.p3Mat">პერიმეტრული LED · მასიური თითბერი</p>
                     <div class="product-card__footer">
                       <span class="product-card__price">€ 1,680</span>
                       <span class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</span>
@@ -358,20 +296,82 @@
                 </a>
               </div>
 
-              <!-- Product 7 -->
-              <div class="reveal reveal--delay-2" role="listitem" data-category="bedroom" data-price="11200">
-                <a href="product.html" class="product-card" id="col-card-7">
+              <!-- Product 4 -->
+              <div class="reveal reveal--delay-3" role="listitem" data-category="cabinets" data-price="4400">
+                <a href="product.html" class="product-card" id="col-card-4">
                   <div class="product-card__image-wrap">
-                    <img src="assets/images/bed_hero_1790075686213.jpg" alt="The Imperiale Bed" loading="lazy" />
+                    <img src="assets/images/cabinet_meridian.jpg" alt="Meridian Tall Column Cabinet" loading="lazy" />
                     <div class="product-card__overlay"><button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button></div>
                     <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
                   </div>
                   <div class="product-card__info">
-                    <span class="product-card__category" data-i18n="products.p8Cat">საძინებელი</span>
-                    <h3 class="product-card__name" data-i18n="products.p8Name">საწოლი Imperiale</h3>
-                    <p class="product-card__materials" data-i18n="products.p8Mat">ანთრაციტის ხავერდი · მასიური თითბერი</p>
+                    <span class="product-card__category" data-i18n="products.p4Cat">კარადები</span>
+                    <h3 class="product-card__name" data-i18n="products.p4Name">მაღალი კარადა Meridian</h3>
+                    <p class="product-card__materials" data-i18n="products.p4Mat">შავი მარმარილო · თითბერის კარკასი</p>
                     <div class="product-card__footer">
-                      <span class="product-card__price">€ 11,200</span>
+                      <span class="product-card__price">€ 4,400</span>
+                      <span class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Product 5 -->
+              <div class="reveal" role="listitem" data-category="vanities" data-price="6800">
+                <a href="product.html" class="product-card" id="col-card-5">
+                  <div class="product-card__image-wrap">
+                    <img src="assets/images/vanity_verona.jpg" alt="The Verona Double Console Vanity" loading="lazy" />
+                    <div class="product-card__overlay"><button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button></div>
+                    <span class="product-card__badge" data-i18n="common.new">ახალი</span>
+                    <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+                  </div>
+                  <div class="product-card__info">
+                    <span class="product-card__category" data-i18n="products.p5Cat">ტუმბოები</span>
+                    <h3 class="product-card__name" data-i18n="products.p5Name">ორმაგი ტუმბო Verona</h3>
+                    <p class="product-card__materials" data-i18n="products.p5Mat">ნაცრისფერი მარმარილო · ორნამენტული ხე</p>
+                    <div class="product-card__footer">
+                      <span class="product-card__price">€ 6,800</span>
+                      <span class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Product 6 -->
+              <div class="reveal reveal--delay-1" role="listitem" data-category="mirrors" data-price="2400">
+                <a href="product.html" class="product-card" id="col-card-6">
+                  <div class="product-card__image-wrap">
+                    <img src="assets/images/mirror_imperiale.jpg" alt="The Imperiale Floating Mirror" loading="lazy" />
+                    <div class="product-card__overlay"><button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button></div>
+                    <span class="product-card__badge" data-i18n="common.bestseller">ბესტსელერი</span>
+                    <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+                  </div>
+                  <div class="product-card__info">
+                    <span class="product-card__category" data-i18n="products.p6Cat">სარკეები</span>
+                    <h3 class="product-card__name" data-i18n="products.p6Name">მინიმალისტური სარკე Imperiale</h3>
+                    <p class="product-card__materials" data-i18n="products.p6Mat">თბილი განათება · ნისლგამძლე მინა</p>
+                    <div class="product-card__footer">
+                      <span class="product-card__price">€ 2,400</span>
+                      <span class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Product 7 -->
+              <div class="reveal reveal--delay-2" role="listitem" data-category="fixtures" data-price="9400">
+                <a href="product.html" class="product-card" id="col-card-7">
+                  <div class="product-card__image-wrap">
+                    <img src="assets/images/basin_palazzo.jpg" alt="The Palazzo Monolithic Stone Tub" loading="lazy" />
+                    <div class="product-card__overlay"><button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button></div>
+                    <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+                  </div>
+                  <div class="product-card__info">
+                    <span class="product-card__category" data-i18n="products.p7Cat">სანტექნიკა</span>
+                    <h3 class="product-card__name" data-i18n="products.p7Name">მონოლითური აბაზანა Palazzo</h3>
+                    <p class="product-card__materials" data-i18n="products.p7Mat">Nero Marquina მარმარილო · თითბერი</p>
+                    <div class="product-card__footer">
+                      <span class="product-card__price">€ 9,400</span>
                       <span class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</span>
                     </div>
                   </div>
@@ -379,19 +379,19 @@
               </div>
 
               <!-- Product 8 -->
-              <div class="reveal reveal--delay-3" role="listitem" data-category="storage" data-price="4400">
+              <div class="reveal reveal--delay-3" role="listitem" data-category="cabinets" data-price="3200">
                 <a href="product.html" class="product-card" id="col-card-8">
                   <div class="product-card__image-wrap">
-                    <img src="assets/images/shelving_hero_1790075697235.jpg" alt="Meridian Open Shelving" loading="lazy" />
+                    <img src="assets/images/etagere_soleil.jpg" alt="Soleil Bath Etagere" loading="lazy" />
                     <div class="product-card__overlay"><button class="product-card__quick-view" data-i18n="common.quickView">სწრაფი ნახვა</button></div>
-                    <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
+                    <button class="product-card__wishlist" aria-label="Add to wishlist" data-i18n-aria="common.addToWishlist"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
                   </div>
                   <div class="product-card__info">
-                    <span class="product-card__category" data-i18n="products.p4Cat">სათავსო</span>
-                    <h3 class="product-card__name" data-i18n="products.p4Name">ღია თაროები Meridian</h3>
-                    <p class="product-card__materials" data-i18n="products.p4Mat">შავი კაკალი · თითბერის დეტალები</p>
+                    <span class="product-card__category" data-i18n="products.p8Cat">კარადები</span>
+                    <h3 class="product-card__name" data-i18n="products.p8Name">სააბაზანოს ეტაჟერკა Soleil</h3>
+                    <p class="product-card__materials" data-i18n="products.p8Mat">მასიური თითბერი · მარმარილოს თაროები</p>
                     <div class="product-card__footer">
-                      <span class="product-card__price">€ 4,400</span>
+                      <span class="product-card__price">€ 3,200</span>
                       <span class="btn--text" style="font-size:var(--text-xs)" data-i18n="common.view">ნახვა →</span>
                     </div>
                   </div>
@@ -431,7 +431,7 @@
         <div class="footer__brand">
           <img src="assets/logo.png" alt="Lussoni" class="footer__brand-emblem" />
           <p class="footer__brand-name">Lussoni</p>
-          <p class="footer__brand-tagline" data-i18n="footer.tagline">გამორჩეული ავეჯი გამორჩეული სივრცეებისთვის. დამზადებულია იტალიაში 1987 წლიდან.</p>
+          <p class="footer__brand-tagline" data-i18n="footer.tagline">ექსკლუზიური სააბაზანოს ავეჯი და სანტექნიკური ხელოვნება. დამზადებულია იტალიაში 1987 წლიდან.</p>
           <div class="footer__social">
             <a href="#" class="footer__social-link" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
             <a href="#" class="footer__social-link" aria-label="Pinterest"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/></svg></a>
@@ -440,10 +440,10 @@
         <div class="footer__col">
           <p class="footer__col-title" data-i18n="footer.colCollections">კოლექციები</p>
           <ul class="footer__col-links">
-            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.livingRoom">მისაღები ოთახი</a></li>
-            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.diningRoom">სასადილო ოთახი</a></li>
-            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.bedroom">საძინებელი</a></li>
-            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.storage">სათავსო</a></li>
+            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.livingRoom">პირსაბანის ტუმბოები</a></li>
+            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.diningRoom">სარკეები &amp; განათება</a></li>
+            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.bedroom">კარადები &amp; სათავსოები</a></li>
+            <li><a href="collection.html" class="footer__col-link" data-i18n="footer.storage">სანტექნიკა</a></li>
           </ul>
         </div>
         <div class="footer__col">

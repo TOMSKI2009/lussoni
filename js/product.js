@@ -162,7 +162,7 @@ function initAddToCart() {
       btn.style.pointerEvents = '';
     }, 2000);
 
-    const productName = lang === 'ka' ? 'სავარძელი Renard' : 'Renard Armchair';
+    const productName = lang === 'ka' ? 'ორმაგი ტუმბო Renard' : 'The Renard Double Vanity';
     const message = lang === 'ka'
       ? `${qty}× ${productName} (${upholstery}, ${frame}) დაემატა კალათაში.`
       : `${qty}× ${productName} (${upholstery}, ${frame}) added to cart.`;
@@ -188,7 +188,7 @@ function initWishlist() {
       : (lang === 'ka' ? 'რჩეულებში დამატება' : 'Add to wishlist')
     );
 
-    const productName = lang === 'ka' ? 'სავარძელი Renard' : 'The Renard Armchair';
+    const productName = lang === 'ka' ? 'ორმაგი ტუმბო Renard' : 'The Renard Double Vanity';
     const savedMsg = lang === 'ka' ? `${productName} შენახულია თქვენს რჩეულებში.` : `${productName} saved to your wishlist.`;
     const removedMsg = lang === 'ka' ? 'წაიშალა რჩეულებიდან.' : 'Removed from wishlist.';
 
